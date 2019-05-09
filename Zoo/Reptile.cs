@@ -8,38 +8,38 @@ namespace Zoo
 {
     class Reptile : Animal
     {
-        public string Skin { get; set; }
+        public string skin { get; set; }
 
 
         public Reptile()
 
         {
-            Skin = "nieznane";
+            skin = "nieznane";
         }
 
-        public Reptile(string Name, int Age, int Weight, string Skin)
-             : base(Name, Age, Weight)
+        public Reptile(string name, int age, double weight, string skin)
+             : base(name, age, weight)
         {
-            this.Skin = Skin;
+            this.skin = skin;
         }
 
         public void CreateReptile()
         {
-            Reptile reptile = new Reptile();
+            //Reptile reptile = new Reptile();
 
             Console.WriteLine("Podaj Imie: ");
-            Name = Console.ReadLine();
+            name = Console.ReadLine();
             Console.WriteLine("Podaj Wiek: ");
-            Age = Convert.ToInt32(Console.ReadLine());
+            age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Podaj Wagę: ");
-            Weigth = Convert.ToInt32(Console.ReadLine());
+            weigth = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Podaj kolor skory: ");
-            Skin = Console.ReadLine();
+            skin = Console.ReadLine();
             ToString();
 
 
         }
-        public override string ToString() => "Imie: " + Name + "\nWiek: " + Age + "\nWaga: " + Weigth + "\nKolor skory: " + Skin;
+        public override string ToString() => "Imie: " + name + "\nWiek: " + age + "\nWaga: " + weigth + "\nKolor skory: " + skin;
 
     }
 

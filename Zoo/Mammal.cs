@@ -8,38 +8,36 @@ namespace Zoo
 {
     class Mammal : Animal
     {
-        public string FurColour { get; set; }
+        public string furColour { get; set; }
 
 
         public Mammal()
 
         {
-            FurColour = "nieznane";
+            furColour = "nieznane";
         }
 
-        public Mammal(string Name, int Age, int Weight, string FurColour)
-             : base(Name, Age, Weight)
+        public Mammal(string name, int age, double weight, string furColour)
+             : base(name, age, weight)
         {
-            this.FurColour = FurColour;
+            this.furColour = furColour;
         }
 
         public void CreateMammal()
-        {
-            Mammal mammal = new Mammal();
-
+        {        
             Console.WriteLine("Podaj Imie: ");
-            Name = Console.ReadLine();
+            name = Console.ReadLine();
             Console.WriteLine("Podaj Wiek: ");
-            Age = Convert.ToInt32(Console.ReadLine());
+            age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Podaj Wagę: ");
-            Weigth = Convert.ToInt32(Console.ReadLine());
+            weigth = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Podaj Kolor Futra: ");
-            FurColour = Console.ReadLine();
+            furColour = Console.ReadLine();
             ToString();
             
         
         }
-        public override string ToString() => "Imie: " + Name + "\nWiek: " + Age + "\nWaga: " + Weigth + "\nKolor Futra: " + FurColour;
+        public override string ToString() => "Imie: " + name + "\nWiek: " + age + "\nWaga: " + weigth + "\nKolor Futra: " + furColour;
     }
 }
 

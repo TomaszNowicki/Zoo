@@ -8,38 +8,36 @@ namespace Zoo
 {
     class Bird : Animal
     {
-        public string Feather { get; set; }
+        public string feather { get; set; }
 
 
         public Bird()
 
         {
-            Feather = "nieznane";
+            feather = "nieznane";
         }
 
-        public Bird(string Name, int Age, int Weight, string Feather)
-             : base(Name, Age, Weight)
+        public Bird(string name, int age, double weight, string feather)
+             : base(name, age, weight)
         {
-            this.Feather = Feather;
+            this.feather = feather;
         }
 
         public void CreateBird()
         {
-            Bird bird = new Bird();
-
             Console.WriteLine("Podaj Imie: ");
-            Name = Console.ReadLine();
+            name = Console.ReadLine();
             Console.WriteLine("Podaj Wiek: ");
-            Age = Convert.ToInt32(Console.ReadLine());
+            age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Podaj Wagę: ");
-            Weigth = Convert.ToInt32(Console.ReadLine());
+            weigth = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Podaj Kolor pior: ");
-            Feather = Console.ReadLine();
+            feather = Console.ReadLine();
             ToString();
 
 
         }
-        public override string ToString() => "Imie: " + Name + "\nWiek: " + Age + "\nWaga: " + Weigth + "\nKolor pior: " + Feather;
+        public override string ToString() => "Imie: " + name + "\nWiek: " + age + "\nWaga: " + weigth + "\nKolor pior: " + feather;
 
     }
 }

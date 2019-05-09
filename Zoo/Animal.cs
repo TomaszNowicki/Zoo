@@ -8,24 +8,24 @@ namespace Zoo
 {
     class Animal
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public int Weigth { get; set; }
+        public string name { get; set; }
+        public int age { get; set; }
+        public double weigth { get; set; }
 
 
 
         public Animal()
         {
-            Name = "nieznane";
-            Age = 0;
-            Weigth = 0;
+            name = "nieznane";
+            age = 0;
+            weigth = 0;
         }
         
-        public Animal(string Name,int Age, int Weigth)
+        public Animal(string name,int age, double weigth)
         {
-            this.Name = Name;
-            this.Age = Age;
-            this.Weigth = Weigth;
+            this.name = name;
+            this.age = age;
+            this.weigth = weigth;
         }
 
         
