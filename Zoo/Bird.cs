@@ -33,6 +33,7 @@ namespace Zoo
             weigth = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Podaj Kolor pior: ");
             feather = Console.ReadLine();
+            Console.WriteLine("\n\nWcisnij jakis klawisz aby powrocic do menu");
             ToString();
 
 

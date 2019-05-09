@@ -35,6 +35,7 @@ namespace Zoo
             weigth = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Podaj kolor skory: ");
             skin = Console.ReadLine();
+            Console.WriteLine("\n\nWcisnij jakis klawisz aby powrocic do menu");
             ToString();
 
 

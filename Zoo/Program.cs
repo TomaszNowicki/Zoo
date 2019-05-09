@@ -69,6 +69,7 @@ namespace Zoo
 
                     case 2:
                         printAnimals(animals);
+                        Console.WriteLine("\n\nWcisnij jakis klawisz aby powrocic do menu");
                         break;
 
                     case 3:
@@ -77,7 +78,7 @@ namespace Zoo
                         var orderedAnimals = animals.OrderBy(x => x.name);
                         printAnimals(animals);
 
-
+                        Console.WriteLine("\n\nWcisnij jakis klawisz aby powrocic do menu");
 
 
                         break;
