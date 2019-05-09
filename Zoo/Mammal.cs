@@ -33,10 +33,10 @@ namespace Zoo
             weigth = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Podaj Kolor Futra: ");
             furColour = Console.ReadLine();
-            Console.WriteLine("\n\nWcisnij jakis klawisz aby powrocic do menu");
             ToString();
-            
-        
+            Console.WriteLine("\n\nWcisnij jakis klawisz aby powrocic do menu");
+
+
         }
         public override string ToString() => "Imie: " + name + "\nWiek: " + age + "\nWaga: " + weigth + "\nKolor Futra: " + furColour;
     }

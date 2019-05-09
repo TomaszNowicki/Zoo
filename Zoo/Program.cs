@@ -1,4 +1,12 @@
-﻿using System;
+﻿//*****************   Tomasz Nowicki   ***********************
+//***************** 	   2019        ***********************
+//****** prosty program ewidencyjny na zaliczenie lab.4 ******
+//********************     WSIZ     **************************
+//************************************************************
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,28 +43,25 @@ namespace Zoo
                 {
                     case 1:
 
-                            Console.WriteLine("Press a key for: \n1.Ssak \n2.Gad \n3.Ptak\n");
+                            Console.WriteLine("**POD MENU**\nWcisnij: \n1.Ssak \n2.Gad \n3.Ptak\n");
                             int subMenu = int.Parse(Console.ReadLine());                      // pod menu
                         {
                             if (subMenu == 1) // tworzenie obiektu ssak
                             {
                                 Mammal mammal = new Mammal();
                                 mammal.CreateMammal();
-                                Console.WriteLine("\n\nTwoj ssak:\n" + mammal.ToString());
                                 animals.Add(mammal);
                             }
                             if (subMenu == 2)  // tworzenie obiektu gad
                             {
                                 Reptile reptile = new Reptile();
                                 reptile.CreateReptile();
-                                Console.WriteLine("\n\nTwoj gad:\n" + reptile.ToString());
                                 animals.Add(reptile);
                             }
                             if (subMenu == 3)  // tworzenie obiektu ptak
                             {
                                 Bird bird = new Bird();
                                 bird.CreateBird();
-                                Console.WriteLine("\n\nTwoj ptak:\n" + bird.ToString());
                                 animals.Add(bird);
                             }
                             if (subMenu > 3)
@@ -73,14 +78,11 @@ namespace Zoo
                         break;
 
                     case 3:
-                        //animals.Sort((x, y) => x."name" - y."name");  // algorytm sortowania
-                        //printAnimals(animals);
-                        var orderedAnimals = animals.OrderBy(x => x.name);
-                        printAnimals(animals);
-
-                        Console.WriteLine("\n\nWcisnij jakis klawisz aby powrocic do menu");
-
-
+                        var orderedAnimals = animals.OrderBy(x => x.name);// algorytm sortowania
+                        foreach (var animal in orderedAnimals)
+                        {
+                            Console.WriteLine(animal.ToString());
+                        }
                         break;
 
                     case 4:
@@ -95,6 +97,7 @@ namespace Zoo
 
 
                 System.Console.ReadKey();
+                Console.Clear();
             }
         }
 
